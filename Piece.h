@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <c++/4.8.3/vector>
+#include <vector>
 
 using namespace std;
 
@@ -14,9 +15,13 @@ private:
     string _name;
 
 public:
+	vector<Piece*>*lesPieces;
+	
     Piece();
     Piece(int id, bool white, bool taken, string name, int positionX, int positionY);
     ~Piece();
+	void initPiece();
+
 
     int getId();
     void setId(int newValue);
